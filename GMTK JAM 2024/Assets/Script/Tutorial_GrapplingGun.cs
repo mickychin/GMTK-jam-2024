@@ -8,9 +8,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     [Header("Layers Settings:")]
     [SerializeField] private bool grappleToAll = false;
     [SerializeField] private int grappableLayerNumber = 9;
-    [SerializeField] private bool Layer2 = false;
     [SerializeField] private int grappableLayerNumber2 = 9;
-    [SerializeField] private bool Layer3 = false;
     [SerializeField] private int grappableLayerNumber3 = 9;
 
 
@@ -124,7 +122,25 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         if (Physics2D.Raycast(firePoint.position, distanceVector.normalized))
         {
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, distanceVector.normalized);
-            if (_hit.transform.gameObject.layer == grappableLayerNumber || grappableLayerNumber2 ||grappableLayerNumber3 ||grappleToAll)
+            if (_hit.transform.gameObject.layer == grappableLayerNumber ||grappleToAll)
+            {
+                if (Vector2.Distance(_hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
+                {
+                    grapplePoint = _hit.point;
+                    grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
+                    grappleRope.enabled = true;
+                }
+            } 
+            else if (_hit.transform.gameObject.layer == grappableLayerNumber2)
+            {
+                if (Vector2.Distance(_hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
+                {
+                    grapplePoint = _hit.point;
+                    grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
+                    grappleRope.enabled = true;
+                }
+            } 
+            else if (_hit.transform.gameObject.layer == grappableLayerNumber3)
             {
                 if (Vector2.Distance(_hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
                 {
