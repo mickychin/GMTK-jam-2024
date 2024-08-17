@@ -131,6 +131,8 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     public void Grapple()
     {
+        //Debug.Log("grapple");
+        FindObjectOfType<Player>().JustJumped = false;
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {

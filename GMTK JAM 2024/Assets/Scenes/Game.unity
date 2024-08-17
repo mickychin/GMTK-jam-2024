@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  JumpForce: 12
+  JumpForce: 8
   groundCheck1: {fileID: 1794851889}
   groundCheck2: {fileID: 1156429821}
   whatIsGround:
@@ -1280,6 +1280,7 @@ MonoBehaviour:
     m_Bits: 64
   CayoteTime: 0.05
   JumpBufferTime: 0.1
+  JustJumped: 0
 --- !u!231 &1306381192
 SpringJoint2D:
   m_ObjectHideFlags: 0

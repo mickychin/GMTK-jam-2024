@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private bool Cayoteing;
     public float JumpBufferTime;
     private bool IsJumpBuffer;
-    private bool JustJumped;
+    public bool JustJumped;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
             StopCoroutine(CayoteTimer());
         }
 
-        if (Input.GetKeyUp(KeyCode.W) && rigibody2D.velocity.y > 0)
+        if (Input.GetKeyUp(KeyCode.W) && rigibody2D.velocity.y > 0 && JustJumped)
         {
             JustJumped = false;
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x, 0);
