@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Helicopter : MonoBehaviour
 {
+    [Header("Movement")]
     public float MinDistance;
     public float Distance;
     public float speed;
     public float MaxSpeed;
+
+    [Header("Shoot")]
+    public Bullet bullet;
+
     private Player player;
     private Rigidbody2D rigibody2d;
     // Start is called before the first frame update
@@ -48,5 +53,15 @@ public class Helicopter : MonoBehaviour
             //move down
             rigibody2d.velocity = new Vector2(rigibody2d.velocity.x, rigibody2d.velocity.y - speed);
         }
+
+
+        Vector2 lookDir = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        rigibody2d.rotation = angle;
+    }
+
+    void Shoot()
+    {
+        Bullet shotedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
     }
 }
