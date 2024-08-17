@@ -23,6 +23,7 @@ public class Helicopter : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
         rigibody2d = GetComponent<Rigidbody2D>();
+        StartCoroutine(Shooting());
     }
 
     // Update is called once per frame
@@ -65,12 +66,14 @@ public class Helicopter : MonoBehaviour
 
     IEnumerator Shooting()
     {
+        Shoot();
         yield return new WaitForSeconds(FireSpeed);
+        StartCoroutine(Shooting());
     }
 
     void Shoot()
     {
-        GameObject shotedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        GameObject shotedBullet = Instantiate(bullet, FirePoint.position, FirePoint.rotation);
         shotedBullet.GetComponent<Rigidbody2D>().AddForce(FirePoint.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }
