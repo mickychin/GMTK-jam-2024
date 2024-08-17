@@ -103,4 +103,13 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(JumpBufferTime);
         IsJumpBuffer = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Kill"))
+        {
+            //die
+
+        }
+    }
 }

@@ -96,7 +96,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         else
         {
             Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
-            print(mousePos);
+            //print(mousePos);
             RotateGun(mousePos, true);
         }
     }
