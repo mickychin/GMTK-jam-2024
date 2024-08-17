@@ -11,6 +11,7 @@ public class Helicopter : MonoBehaviour
     public float MaxSpeed;
 
     [Header("Shoot")]
+    public float FireSpeed;
     public GameObject bullet;
     public float bulletSpeed;
     public Transform FirePoint;
@@ -60,6 +61,11 @@ public class Helicopter : MonoBehaviour
         Vector2 lookDir = player.transform.position - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rigibody2d.rotation = angle;
+    }
+
+    IEnumerator Shooting()
+    {
+        yield return new WaitForSeconds(FireSpeed);
     }
 
     void Shoot()
