@@ -15,6 +15,7 @@ public class Helicopter : MonoBehaviour
     public GameObject bullet;
     public float bulletSpeed;
     public Transform FirePoint;
+    public GameObject Shooter;
 
     private Player player;
     private Rigidbody2D rigibody2d;
@@ -58,10 +59,9 @@ public class Helicopter : MonoBehaviour
             rigibody2d.velocity = new Vector2(rigibody2d.velocity.x, rigibody2d.velocity.y - speed);
         }
 
-
         Vector2 lookDir = player.transform.position - transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        rigibody2d.rotation = angle;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
+        Shooter.GetComponent<Rigidbody2D>().rotation = angle;
     }
 
     IEnumerator Shooting()
