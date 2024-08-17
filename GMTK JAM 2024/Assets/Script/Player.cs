@@ -7,8 +7,10 @@ public class Player : MonoBehaviour
 {
     [Header("Run")]
     public float speed;
+    public float MaxSpeed;
     public float JumpForce;
     private float moveInput;
+    public float friction;
 
     private Rigidbody2D rigibody2D;
 
@@ -33,7 +35,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.W))
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             IsJumpBuffer = true;
             StopCoroutine(JumpBufferTimer());
@@ -51,7 +53,7 @@ public class Player : MonoBehaviour
             StopCoroutine(CayoteTimer());
         }
 
-        if (Input.GetKeyUp(KeyCode.W) && rigibody2D.velocity.y > 0 && JustJumped)
+        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.Space)) && rigibody2D.velocity.y > 0 && JustJumped)
         {
             JustJumped = false;
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x, 0);
@@ -73,7 +75,18 @@ public class Player : MonoBehaviour
         }
 
         moveInput = Input.GetAxis("Horizontal");
-        rigibody2D.velocity = new Vector2(moveInput * speed, rigibody2D.velocity.y);
+        if(rigibody2D.velocity.x < MaxSpeed && moveInput > 0)
+        {
+            rigibody2D.velocity = new Vector2(rigibody2D.velocity.x + moveInput * speed, rigibody2D.velocity.y);
+        }
+        if (rigibody2D.velocity.x > -MaxSpeed && moveInput < 0)
+        {
+            rigibody2D.velocity = new Vector2(rigibody2D.velocity.x + moveInput * speed, rigibody2D.velocity.y);
+        }
+        if (moveInput == 0)
+        {
+            rigibody2D.velocity = new Vector2(rigibody2D.velocity.x * friction, rigibody2D.velocity.y);
+        }
     }
 
     IEnumerator CayoteTimer()
