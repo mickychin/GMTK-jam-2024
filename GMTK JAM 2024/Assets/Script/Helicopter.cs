@@ -11,7 +11,9 @@ public class Helicopter : MonoBehaviour
     public float MaxSpeed;
 
     [Header("Shoot")]
-    public Bullet bullet;
+    public GameObject bullet;
+    public float bulletSpeed;
+    public Transform FirePoint;
 
     private Player player;
     private Rigidbody2D rigibody2d;
@@ -62,6 +64,7 @@ public class Helicopter : MonoBehaviour
 
     void Shoot()
     {
-        Bullet shotedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        GameObject shotedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        shotedBullet.GetComponent<Rigidbody2D>().AddForce(FirePoint.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }
