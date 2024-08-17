@@ -313,9 +313,9 @@ MonoBehaviour:
   maxDistnace: 4
   launchToPoint: 1
   launchType: 1
-  launchSpeed: 0.3
+  launchSpeed: 1.5
   autoConfigureDistance: 0
-  targetDistance: 3
+  targetDistance: 1
   targetFrequncy: 1
   grapplePoint: {x: 0, y: 0}
   grappleDistanceVector: {x: 0, y: 0}
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  JumpForce: 8
+  JumpForce: 12
   groundCheck1: {fileID: 1794851889}
   groundCheck2: {fileID: 1156429821}
   whatIsGround:
