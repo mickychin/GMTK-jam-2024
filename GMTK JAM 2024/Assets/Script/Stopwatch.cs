@@ -14,7 +14,7 @@ public class Stopwatch : MonoBehaviour
         currentTime = 0;
     }
 
-    // // Update is called once per frame
+    // Update is called once per frame
     // void Update()
     // {
     //     if (stopwatchActive == true) {
