@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Tutorial_GrapplingGun : MonoBehaviour
@@ -11,6 +12,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     [Header("Main Camera:")]
     public Camera m_camera;
+    public float DistanceBetwMouseNPlayZ;
 
     [Header("Transform Ref:")]
     public Transform gunHolder;
@@ -52,7 +54,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     {
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
-
+        //DistanceBetwMouseNPlayZ = Vector3.Distance(m_camera.transform.position, gunHolder.position);
     }
 
     private void Update()
@@ -69,7 +71,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             }
             else
             {
-                Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 mousePos = m_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, DistanceBetwMouseNPlayZ));
                 RotateGun(mousePos, true);
             }
 
