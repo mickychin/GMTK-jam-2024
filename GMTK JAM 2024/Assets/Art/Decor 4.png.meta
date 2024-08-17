@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: 330dca8cfbcbfe04da510534944aade4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Decor 4_5
+      rect:
+        serializedVersion: 2
+        x: 6294
+        y: 0
+        width: 1910
+        height: 1957
+      alignment: 9
+      pivot: {x: 0.4992911, y: 0.07323461}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ac328b93452ee4aa702b538edae726
+      internalID: -1671431009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decor 4_25
+      rect:
+        serializedVersion: 2
+        x: 4332
+        y: 22
+        width: 469
+        height: 1078
+      alignment: 9
+      pivot: {x: 0.05802947, y: 0.14557827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e93f282a496adc40b2c6b4118d0247d
+      internalID: 296579649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decor 4_26
+      rect:
+        serializedVersion: 2
+        x: 4894
+        y: 10
+        width: 701
+        height: 1123
+      alignment: 9
+      pivot: {x: 0.16878092, y: 0.18964235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ddb21f0067da4478a1095b738e7767
+      internalID: -1610518446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decor 4_28
+      rect:
+        serializedVersion: 2
+        x: 8256
+        y: 16
+        width: 2017
+        height: 1777
+      alignment: 9
+      pivot: {x: 0.4953094, y: 0.10064543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921c0cd7f0dd4cd419e46b5f0c9ce158
+      internalID: 360849703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decor 4_30
+      rect:
+        serializedVersion: 2
+        x: 5693
+        y: 0
+        width: 317
+        height: 726
+      alignment: 9
+      pivot: {x: 0.47525784, y: 0.2619959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a635932fcff184096f933b4c6f030b
+      internalID: -204811622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Decor 4_0: -934632085
+      Decor 4_1: 1028362865
+      Decor 4_10: -370049722
+      Decor 4_11: 856266148
+      Decor 4_12: 1282875919
+      Decor 4_13: 477172771
+      Decor 4_14: 1491033212
+      Decor 4_15: 1227460588
+      Decor 4_16: -387107767
+      Decor 4_17: 614883051
+      Decor 4_18: 1340349108
+      Decor 4_19: -1303116774
+      Decor 4_2: -1459388099
+      Decor 4_20: 2016344349
+      Decor 4_21: 1226125011
+      Decor 4_22: -1899704943
+      Decor 4_23: -1526633010
+      Decor 4_24: -523327851
+      Decor 4_25: 296579649
+      Decor 4_26: -1610518446
+      Decor 4_27: -742195558
+      Decor 4_28: 360849703
+      Decor 4_29: 738006004
+      Decor 4_3: -1990673280
+      Decor 4_30: -204811622
+      Decor 4_31: -1622116841
+      Decor 4_32: 1945116143
+      Decor 4_4: -2077332362
+      Decor 4_5: -1671431009
+      Decor 4_6: 775750812
+      Decor 4_7: 984433267
+      Decor 4_8: 130504848
+      Decor 4_9: -1213652273
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
