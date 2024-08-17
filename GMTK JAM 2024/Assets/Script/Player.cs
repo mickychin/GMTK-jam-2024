@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
         if (IsJumpBuffer && (IsGrounded || IsCayote))
         {
-            rigibody2D.velocity = Vector2.up * JumpForce;
+            rigibody2D.velocity = new Vector2(rigibody2D.velocity.x, rigibody2D.velocity.y) + Vector2.up * JumpForce;
             IsJumpBuffer = false;
             IsCayote = false;
             Cayoteing = false;
