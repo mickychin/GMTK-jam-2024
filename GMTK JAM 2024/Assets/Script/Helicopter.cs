@@ -38,12 +38,16 @@ public class Helicopter : MonoBehaviour
     {
         if (player.transform.position.x > transform.position.x && Distance > 5 && rigibody2d.velocity.x < MaxSpeed) // if player is on the right
         {
+            //look right
+            transform.localScale = new Vector2(transform.localScale.y, transform.localScale.y);
             //move right
             rigibody2d.velocity = new Vector2(rigibody2d.velocity.x + speed, rigibody2d.velocity.y);
         }
 
         if (player.transform.position.x < transform.position.x && Distance > 5 && rigibody2d.velocity.x > -MaxSpeed) // if player is on the left
         {
+            //look left
+            transform.localScale = new Vector2(-transform.localScale.y, transform.localScale.y);
             //move left
             rigibody2d.velocity = new Vector2(rigibody2d.velocity.x - speed, rigibody2d.velocity.y);
         }
