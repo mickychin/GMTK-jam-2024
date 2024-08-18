@@ -24,7 +24,17 @@ public class Player : MonoBehaviour
     private bool Cayoteing;
     public float JumpBufferTime;
     private bool IsJumpBuffer;
-    public bool JustJumped;
+
+    [Header("Wall Run")]
+    public bool Grappling1;
+    public bool Grappling2;
+    public Transform DetectPos;
+    public Transform DetectLeftPos;
+    public bool IsOnWall;
+    public bool IsOnLeftWall;
+    public float DetectWallRange;
+    public float wallSpeed;
+    public float MaxWallSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +58,6 @@ public class Player : MonoBehaviour
             IsJumpBuffer = false;
             IsCayote = false;
             Cayoteing = false;
-            JustJumped = true;
             StopCoroutine(JumpBufferTimer());
             StopCoroutine(CayoteTimer());
         }
@@ -56,6 +65,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        IsOnWall = Physics2D.OverlapCircle(DetectPos.position, DetectWallRange, whatIsGround);
+        IsOnLeftWall = Physics2D.OverlapCircle(DetectLeftPos.position, DetectWallRange, whatIsGround);
         IsGrounded = Physics2D.OverlapArea(groundCheck1.position, groundCheck2.position, whatIsGround);
         if (IsGrounded)
         {
@@ -88,6 +99,23 @@ public class Player : MonoBehaviour
         else if (moveInput < 0 && rigibody2D.velocity.x > 0)
         {
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x * friction, rigibody2D.velocity.y);
+        }
+
+        if(IsOnWall)
+        {
+            //wall run
+            if(moveInput > 0 && rigibody2D.velocity.y < MaxSpeed)
+            {
+                rigibody2D.velocity = new Vector2(rigibody2D.velocity.x, rigibody2D.velocity.y + wallSpeed);
+            }
+        }
+        else if (IsOnLeftWall)
+        {
+            //wall run
+            if (moveInput < 0 && rigibody2D.velocity.y < MaxSpeed)
+            {
+                rigibody2D.velocity = new Vector2(rigibody2D.velocity.x, rigibody2D.velocity.y + wallSpeed);
+            }
         }
     }
 

@@ -73,7 +73,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             else
             {
                 Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
-                print(mousePos);
+                //print(mousePos);
                 RotateGun(mousePos, true);
             }
 
@@ -89,6 +89,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
+            FindObjectOfType<Player>().Grappling1 = false;
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = 3;
@@ -155,7 +156,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     public void Grapple()
     {
         //Debug.Log("grapple");
-        FindObjectOfType<Player>().JustJumped = false;
+        FindObjectOfType<Player>().Grappling1 = true;
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {

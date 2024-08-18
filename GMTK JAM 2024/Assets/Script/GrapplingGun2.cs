@@ -89,6 +89,7 @@ public class GrapplingGun2 : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Mouse1))
         {
+            FindObjectOfType<Player>().Grappling2 = false;
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = 3;
@@ -155,7 +156,8 @@ public class GrapplingGun2 : MonoBehaviour
     public void Grapple()
     {
         //Debug.Log("grapple");
-        FindObjectOfType<Player>().JustJumped = false;
+        //FindObjectOfType<Player>().JustJumped = false;
+        FindObjectOfType<Player>().Grappling2 = true;
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {
