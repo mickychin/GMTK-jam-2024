@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: 9c47e51c2cd994a4fa466f6a0830c3d3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DecorSet1_0
+      rect:
+        serializedVersion: 2
+        x: 4574
+        y: 0
+        width: 3501
+        height: 3723
+      alignment: 9
+      pivot: {x: 0.37998685, y: 0.07835228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60102f82cfd20254083d280547011f67
+      internalID: -477395338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorSet1_7
+      rect:
+        serializedVersion: 2
+        x: 8128
+        y: 0
+        width: 903
+        height: 3992
+      alignment: 9
+      pivot: {x: 0.43537602, y: 0.03221112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9886faaa1960f0b4e86f834c8d23d008
+      internalID: -1804657782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorSet1_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 481
+        height: 1394
+      alignment: 9
+      pivot: {x: 0.063234836, y: 0.06881379}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7614ca43fbb52a24a9545cdb8e8151d1
+      internalID: 1762658622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorSet1_11
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 922
+        height: 1394
+      alignment: 9
+      pivot: {x: 0.4873415, y: 0.0855589}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7fa5c5b5654094ea320ee90b422e41
+      internalID: -358510522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorSet1_13
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 0
+        width: 605
+        height: 1193
+      alignment: 9
+      pivot: {x: 0.18169107, y: 0.09888974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176956a9926e0444d851508153c40f06
+      internalID: 1450426176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DecorSet1_14
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 0
+        width: 591
+        height: 1184
+      alignment: 9
+      pivot: {x: 0.1346545, y: 0.09584077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f596588be3ab8f44cb0ba9a72f399c76
+      internalID: -1935635389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DecorSet1_0: -477395338
+      DecorSet1_1: -1411788824
+      DecorSet1_10: -546633126
+      DecorSet1_11: -358510522
+      DecorSet1_12: 550365181
+      DecorSet1_13: 1450426176
+      DecorSet1_14: -1935635389
+      DecorSet1_2: -250956432
+      DecorSet1_3: 1960679981
+      DecorSet1_4: 1684675017
+      DecorSet1_5: 1816910910
+      DecorSet1_6: -1415987128
+      DecorSet1_7: -1804657782
+      DecorSet1_8: 1762658622
+      DecorSet1_9: -2061176077
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
