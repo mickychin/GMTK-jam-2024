@@ -76,6 +76,7 @@ public class Helicopter : MonoBehaviour
     void Shoot()
     {
         GameObject shotedBullet = Instantiate(bullet, FirePoint.position, FirePoint.rotation);
+        //shotedBullet.transform.Rotate(0,0,90);
         shotedBullet.GetComponent<Rigidbody2D>().AddForce(FirePoint.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }
