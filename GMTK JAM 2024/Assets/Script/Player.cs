@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
     public float wallSpeed;
     public float MaxWallSpeed;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,25 +81,43 @@ public class Player : MonoBehaviour
             StartCoroutine(CayoteTimer());
         }
 
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("Walking", true);
+            animator.speed = Mathf.Abs(rigibody2D.velocity.x / 10);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+            animator.speed = 1;
+        }
+
         moveInput = Input.GetAxis("Horizontal");
         if(rigibody2D.velocity.x < MaxSpeed && moveInput > 0)
         {
+            // move right
+            animator.gameObject.transform.localScale = new Vector2(1,1);
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x + moveInput * speed, rigibody2D.velocity.y);
         }
         if (rigibody2D.velocity.x > -MaxSpeed && moveInput < 0)
         {
+            //move left
+            animator.gameObject.transform.localScale = new Vector2(-1, 1);
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x + moveInput * speed, rigibody2D.velocity.y);
         }
         if(moveInput == 0)
         {
+            //friction
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x * friction, rigibody2D.velocity.y);
         }
         else if (moveInput > 0 && rigibody2D.velocity.x < 0)
         {
+            //friction
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x * friction, rigibody2D.velocity.y);
         }
         else if (moveInput < 0 && rigibody2D.velocity.x > 0)
         {
+            //friction
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x * friction, rigibody2D.velocity.y);
         }
 
