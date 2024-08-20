@@ -5,14 +5,14 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-    }
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        DontDestroyOnLoad(this.gameObject);
     }
 }
