@@ -32,6 +32,11 @@ public class Helicopter : MonoBehaviour
     void Update()
     {
         Distance = Mathf.Abs(transform.position.x - player.transform.position.x) + Mathf.Abs(transform.position.y - player.transform.position.y);
+
+        if (Distance >= 70f)
+        {
+            transform.position = new Vector2(player.transform.position.x - 70f, transform.position.y);
+        }
     }
 
     private void FixedUpdate()
