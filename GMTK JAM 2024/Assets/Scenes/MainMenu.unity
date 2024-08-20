@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 932348698}
   m_Layer: 0
   m_Name: Song
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ AudioSource:
   m_GameObject: {fileID: 932348695}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5b506fc26ae5b8c4cbc23fc51fe1872a, type: 2}
   m_audioClip: {fileID: 8300000, guid: 34160a0a90e66804393a5bbec31fdd31, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9596e50f33ae54e906f8977867f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
 --- !u!1001 &864694782399550850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -444,6 +445,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1405758177683562428, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405758177683562428, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405758177683562428, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2128797559}
+    - target: {fileID: 1405758177683562428, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405758177683562428, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSetting
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405758177683562428, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405758177683562428, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554858596485615728, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554858596485615728, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1980
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554858596485615728, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 4847046955563451937, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -456,6 +497,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2128797559}
+    - target: {fileID: 7086287337165745087, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 375.1289
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086287337165745087, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -203.896
+      objectReference: {fileID: 0}
     - target: {fileID: 8640438046475593957, guid: 09620c4031e49bc408159f4306881b6e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
