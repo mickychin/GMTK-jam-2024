@@ -15,11 +15,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigibody2D;
 
     [Header("Jump")]
-    private bool IsGrounded;
     public Transform groundCheck1;
     public Transform groundCheck2;
     public LayerMask whatIsGround;
     public float CayoteTime;
+    private bool IsGrounded;
     private bool IsCayote;
     private bool Cayoteing;
     public float JumpBufferTime;
@@ -38,6 +38,14 @@ public class Player : MonoBehaviour
 
     public Animator animator;
 
+    [Header("Death")]
+    public float RespawnTime;
+    public GameObject DeathParticle;
+    private bool IsDead;
+    private Transform LastCheckPoint;
+    public GameObject JumpParticle;
+    public Transform JumpParticleSpawns;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +55,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (IsDead)
+        {
+            return;
+        }
         if(Input.GetKeyDown(KeyCode.Space))
         {
             IsJumpBuffer = true;
@@ -56,6 +68,10 @@ public class Player : MonoBehaviour
 
         if (IsJumpBuffer && (IsGrounded || IsCayote))
         {
+            //animator.SetBool("Falling", true);
+            
+            Instantiate(JumpParticle, JumpParticleSpawns.position, Quaternion.identity);
+            animator.SetTrigger("Jump");
             rigibody2D.velocity = new Vector2(rigibody2D.velocity.x, rigibody2D.velocity.y) + Vector2.up * JumpForce;
             IsJumpBuffer = false;
             IsCayote = false;
@@ -67,6 +83,10 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (IsDead)
+        {
+            return;
+        }
         IsOnWall = Physics2D.OverlapCircle(DetectPos.position, DetectWallRange, whatIsGround);
         IsOnLeftWall = Physics2D.OverlapCircle(DetectLeftPos.position, DetectWallRange, whatIsGround);
         IsGrounded = Physics2D.OverlapArea(groundCheck1.position, groundCheck2.position, whatIsGround);
@@ -84,7 +104,14 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             animator.SetBool("Walking", true);
-            animator.speed = Mathf.Abs(rigibody2D.velocity.x / 10);
+            if(rigibody2D.velocity.y == 0)
+            {
+                animator.speed = Mathf.Abs(rigibody2D.velocity.x / 10);
+            }
+            else
+            {
+                animator.speed = 1;
+            }
         }
         else
         {
@@ -137,6 +164,22 @@ public class Player : MonoBehaviour
                 rigibody2D.velocity = new Vector2(rigibody2D.velocity.x, rigibody2D.velocity.y + wallSpeed);
             }
         }
+
+        if(rigibody2D.velocity.y < 0)
+        {
+            //falling
+            animator.SetBool("Falling", true);
+            if (IsGrounded)
+            {
+                GetComponent<AudioSource>().Play();
+                Instantiate(JumpParticle, JumpParticleSpawns.position, Quaternion.identity);
+            }
+
+        }
+        else
+        {
+            animator.SetBool("Falling", false);
+        }
     }
 
     IEnumerator CayoteTimer()
@@ -152,12 +195,33 @@ public class Player : MonoBehaviour
         IsJumpBuffer = false;
     }
 
+    public void Death()
+    {
+        //Debug.Log("death");
+        StartCoroutine(DeathAndRespawn());
+    }
+
+    IEnumerator DeathAndRespawn()
+    {
+        //kill player
+        //run death anim
+        //sfx
+        //Debug.Log("Deathandres");
+        IsDead = true;
+        GameObject spawnedDeathParticle = Instantiate(DeathParticle, new Vector3(transform.position .x, transform.position.y, transform.position.z), Quaternion.identity);
+        GetComponent<BoxCollider2D>().enabled = false;
+        yield return new WaitForSeconds(RespawnTime);
+        GetComponent<BoxCollider2D>().enabled = true;
+        IsDead = false;
+        transform.position = LastCheckPoint.position;
+        Destroy(spawnedDeathParticle);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Kill"))
+        if (collision.CompareTag("Checkpoints"))
         {
-            //die
-
+            LastCheckPoint = collision.transform;
         }
     }
 }

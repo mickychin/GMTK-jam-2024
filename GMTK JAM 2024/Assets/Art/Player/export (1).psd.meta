@@ -225,27 +225,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 5612, y: 1476}
     spritePosition: {x: 1882, y: 241}
-  - name: BG
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 5600
-      height: 3150
-    spriteID: 40df0ec0339e32644b99bab9ce0a1ca3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
     parts: []

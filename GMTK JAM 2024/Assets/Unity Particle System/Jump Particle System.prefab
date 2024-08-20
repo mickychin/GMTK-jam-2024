@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3193445550100475145}
   - component: {fileID: 8818474804475296513}
   - component: {fileID: 7071506239472341533}
+  - component: {fileID: -5166401524974413202}
   m_Layer: 0
   m_Name: Jump Particle System
   m_TagString: Untagged
@@ -4888,3 +4889,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-5166401524974413202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4642010273506227460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0c8458497154342ab5e72a770ffc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeBe4Destroy: 2

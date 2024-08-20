@@ -156,6 +156,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     public void Grapple()
     {
         //Debug.Log("grapple");
+        GetComponent<AudioSource>().Play();
         FindObjectOfType<Player>().Grappling1 = true;
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
